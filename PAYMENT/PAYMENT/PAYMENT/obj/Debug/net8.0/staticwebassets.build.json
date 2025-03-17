@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "osXl2aN5cBMOp7AK+XPv6X5UdVsPqQYq/DQRb/0zMPk=",
+  "Source": "PAYMENT",
+  "BasePath": "_content/PAYMENT",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
