@@ -12,8 +12,11 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["PAYMENT/PAYMENT.csproj", "PAYMENT/"]
-RUN dotnet restore "./PAYMENT/PAYMENT.csproj"
+
+COPY *.csproj .
+RUN dotnet restore
+#COPY ["PAYMENT/PAYMENT.csproj", "PAYMENT/"]
+#RUN dotnet restore "./PAYMENT/PAYMENT.csproj"
 COPY . .
 WORKDIR "/src/PAYMENT"
 RUN dotnet build "./PAYMENT.csproj" -c $BUILD_CONFIGURATION -o /app/build
